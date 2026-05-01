@@ -1,0 +1,175 @@
+/* ===============================
+FILE 5: style.css
+USE FOR ALL PAGES
+=============================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:url('background.jpg') center/cover fixed;
+color:white;
+min-height:100vh;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+z-index:-1;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.content{
+animation:fadeUp 1.3s ease;
+}
+
+.content h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.content h2{
+font-size:2rem;
+margin-bottom:10px;
+}
+
+.content p{
+font-size:1.2rem;
+margin-bottom:20px;
+}
+
+.page{
+padding:60px 8%;
+text-align:center;
+}
+
+.page h1{
+font-size:3rem;
+margin-bottom:30px;
+}
+
+.card{
+background:rgba(255,255,255,.12);
+padding:25px;
+margin:15px auto;
+border-radius:20px;
+max-width:800px;
+backdrop-filter:blur(8px);
+animation:fadeUp 1s ease;
+}
+
+.card:hover{
+transform:translateY(-5px);
+transition:.4s;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.future{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin:25px 0;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:10px;
+background:#ff4d88;
+color:white;
+text-decoration:none;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#ff2f72;
+}
+
+.nav{
+margin-top:30px;
+}
+
+.hidden{
+display:none;
+margin-top:25px;
+}
+
+.mini-title{
+margin-top:30px;
+font-size:2rem;
+}
+
+/* animations */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* responsive */
+@media(max-width:768px){
+
+.content h1{
+font-size:2.5rem;
+}
+
+.content h2{
+font-size:1.4rem;
+}
+
+.page h1{
+font-size:2rem;
+}
+
+.gallery img{
+height:220px;
+}
+
+.btn{
+padding:12px 20px;
+font-size:.95rem;
+}
+
+}
